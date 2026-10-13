@@ -29,18 +29,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install flet
 
-      - name: Create Flet App Structure
-        run: |
-          mkdir -p myapp/src
-          cp main.py myapp/src/main.py
-
       - name: Build APK
         run: |
-          cd myapp
-          yes y | flet build apk --verbose
+          flet build apk --verbose
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: MusicPlayer-APK
-          path: myapp/build/apk/*.apk
+          path: build/apk/*.apk
