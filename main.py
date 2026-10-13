@@ -4,9 +4,8 @@ def main(page: ft.Page):
     page.title = "Dark Crimson Music Player"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.bgcolor = "#0B090A"  # لون داكن فاخر
+    page.bgcolor = "#0B090A"
 
-    # واجهة زجاجية بتصميم Crimson الداكن
     card = ft.Container(
         content=ft.Column(
             [
@@ -37,4 +36,5 @@ def main(page: ft.Page):
 
     page.add(card)
 
-ft.app(target=main)
+if __name__ == "__main__":
+    ft.app(target=main)
